@@ -1,0 +1,17 @@
+<?php
+function learquivo($nomedoarquivo)
+	{
+	$fp=fopen($nomedoarquivo,"r");//fopen(), função php que permite abrir arquivo, o parâmetro r (read) leitura.
+	//laço que irá ler todo o conteúdo do arquivo.
+	while (!feof($fp))
+		{//while, comando de estrutura de repetição que significa enquanto.
+		//feof(), Testa pelo fim-de-arquivo (eof- end of file)
+		//leitura de cada linha do arquivo.
+		$linha=fgets($fp,500);//fgets(), função que lê uma linha de um ponteiro do arquivo.
+		echo $linha;
+		echo "<br/>";
+		}//fim do laço
+	//fecha o arquivo
+	fclose($fp); //fclose(), função php que significa fechar o arquivo.
+	}
+?>

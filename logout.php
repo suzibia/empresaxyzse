@@ -1,0 +1,6 @@
+<?php
+	session_start();//Iniciar sessão
+	$_SESSION=array();//Limpando o array SESSION
+	session_destroy();//Função que destrói uma sessão
+	header ("Location:index.php");
+?>
